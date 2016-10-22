@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/get-started.css';
 
 class GetStarted extends React.Component {
   constructor(props) {
