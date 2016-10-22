@@ -1,0 +1,33 @@
+.room-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .slider {
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    .room-image {
+      height: 350px;
+      width: 100%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+}
+
+.content {
+  padding: 16px 24px;
+}
+
+@media (max-width: 480px) {
+  .room-page {
+    .slider {
+      .room-image {
+        background-size: cover;
+      }
+    }
+  }
+}

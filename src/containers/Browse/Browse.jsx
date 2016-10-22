@@ -14,7 +14,6 @@ class Browse extends Component {
   }
 
   render() {
-    console.log(this.state)
     let rooms = store.rooms.data.map((room, i) => {
       return (<RoomItem room={room} key={i} />)
     })
