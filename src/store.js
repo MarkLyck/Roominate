@@ -20,7 +20,7 @@ let store = {
       location: {
         coordinates: [30.2672, -97.7431]
       },
-      _id: 'roomid'
+      _id: 'roomid2'
     },
     {
       price: 765,
@@ -30,7 +30,7 @@ let store = {
       location: {
         coordinates: [30.2672, -97.7431]
       },
-      _id: 'roomid'
+      _id: 'roomid3'
     },
     {
       price: 765,
@@ -40,7 +40,7 @@ let store = {
       location: {
         coordinates: [30.2672, -97.7431]
       },
-      _id: 'roomid'
+      _id: 'roomid4'
     },
     {
       price: 765,
@@ -50,7 +50,7 @@ let store = {
       location: {
         coordinates: [30.2672, -97.7431]
       },
-      _id: 'roomid'
+      _id: 'roomid5'
     },
     {
       price: 765,
@@ -60,7 +60,7 @@ let store = {
       location: {
         coordinates: [30.2672, -97.7431]
       },
-      _id: 'roomid'
+      _id: 'roomid6'
     }]
   },
   users: []
