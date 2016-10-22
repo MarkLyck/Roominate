@@ -25,8 +25,8 @@ class NavBar extends Component {
     if (this.state.drawerOpen) {
       Drawer = (
         <aside className="drawer">
-          <Link onClick={this.toggleDrawer} to="/signin">Sign in</Link>
-          <Link onClick={this.toggleDrawer} to="/signup">Sign up</Link>
+          <Link onClick={this.toggleDrawer} to="/">Sign in</Link>
+          <Link onClick={this.toggleDrawer} to="/register">Sign up</Link>
           <Link onClick={this.toggleDrawer} to="/browse">Browse</Link>
           <Link onClick={this.toggleDrawer} to="/profile">Profile</Link>
         </aside>

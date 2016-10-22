@@ -1,0 +1,24 @@
+<svg width="35" height="47" viewBox="0 0 35 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Pin</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-191 108)" figma:type="canvas">
+<g id="Pin" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path0_fill" transform="translate(191 -108)" fill="#24C890" style="mix-blend-mode:normal;"/>
+<use xlink:href="#path1_fill" transform="translate(191 -108)" fill="#24C890" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Ellipse" style="mix-blend-mode:normal;" figma:type="ellipse">
+<use xlink:href="#path2_fill" transform="translate(194 -105)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path3_fill" transform="translate(200.667 -98.5)" fill="#24C890" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 23.5 33L 12.5 33L 18 47L 23.5 33Z"/>
+<path id="path1_fill" d="M 35 17.5C 35 27.165 27.165 35 17.5 35C 7.83502 35 0 27.165 0 17.5C 0 7.83502 7.83502 0 17.5 0C 27.165 0 35 7.83502 35 17.5Z"/>
+<path id="path2_fill" d="M 29 14.5C 29 22.5081 22.5081 29 14.5 29C 6.49187 29 0 22.5081 0 14.5C 0 6.49187 6.49187 0 14.5 0C 22.5081 0 29 6.49187 29 14.5Z"/>
+<path id="path3_fill" d="M 6.66667 14.1667L 6.66667 9.16667L 10 9.16667L 10 14.1667L 14.1667 14.1667L 14.1667 7.5L 16.6667 7.5L 8.33333 0L 0 7.5L 2.5 7.5L 2.5 14.1667L 6.66667 14.1667Z"/>
+</defs>
+</svg>
