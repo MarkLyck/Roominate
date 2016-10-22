@@ -24,7 +24,7 @@
 .drawer {
   height: calc(100% - 64px);
   width: 200px;
-  position: absolute;
+  position: fixed;
   top: 64px;
   right: 0;
   background: #fff;
