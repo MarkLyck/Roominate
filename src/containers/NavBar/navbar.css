@@ -23,7 +23,7 @@
 
 .drawer {
   height: calc(100% - 64px);
-  width: 40vw;
+  width: 200px;
   position: absolute;
   top: 64px;
   right: 0;
