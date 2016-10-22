@@ -1,8 +1,7 @@
 import React from 'react';
-import App from './containers/User/Login';
+import NavBar from './containers/NavBar/NavBar';
 import { render } from 'react-dom';
 import { BrowserRouter, Match, Miss } from 'react-router';
-
 
 import Login from './containers/User/Login';
 import Register from './containers/User/Register';
@@ -16,7 +15,7 @@ console.log('goodbye blue monday');
 const Root = () => {
   return (
     <BrowserRouter>
-      <div>
+      <NavBar>
         <Match exactly pattern='/' component={Login} />
         <Match exactly pattern='/register' component={Register} />
         <Match exactly pattern='/get-started' component={GetStarted} />
@@ -24,7 +23,7 @@ const Root = () => {
         <Match exactly pattern='/browse' component={Browse} />
         <Match exactly pattern='/404' component={NotFound} />
         <Miss component={NotFound} />
-      </div>
+      </NavBar>
     </BrowserRouter>
   )
 }
