@@ -3,7 +3,7 @@ import './styles/login-signup.css';
 import {Link} from 'react-router';
 import Redirect from 'react-router/Redirect';
 
-class Login extends React.Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.validate = this.validate.bind(this);

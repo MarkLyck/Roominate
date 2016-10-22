@@ -1,2 +1,18 @@
 @import './variables.css';
 @import '../../node_modules/bulma/css/bulma.css';
+
+html, body, #root {
+  height: 100%;
+}
+
+#root > div {
+  height: 100%;
+}
+
+main {
+  height: calc(100% - 64px);
+}
+
+input {
+  outline: none;
+}
