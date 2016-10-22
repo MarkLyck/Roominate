@@ -36,6 +36,8 @@
     "object-assign": "4.1.0",
     "path-exists": "2.1.0",
     "postcss-loader": "0.13.0",
+    "postcss-nested": "^1.0.0",
+    "precss": "^1.4.0",
     "promise": "7.1.1",
     "react-dev-utils": "^0.2.1",
     "recursive-readdir": "2.1.0",
@@ -48,8 +50,10 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "bulma": "^0.2.3",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-router": "^4.0.0-alpha.5"
   },
   "scripts": {
     "start": "node scripts/start.js",
