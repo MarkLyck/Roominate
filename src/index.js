@@ -12,7 +12,7 @@ import Profile from './containers/User/Profile';
 import Browse from './containers/Browse/Browse';
 import NotFound from './containers/NotFound/NotFound';
 
-console.log('goodbye blue monday');
+import './styles/main.css'
 
 const Root = () => {
   return (
