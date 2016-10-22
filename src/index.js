@@ -1,7 +1,6 @@
 import React from 'react';
 
 import NavBar from './containers/NavBar/NavBar';
-
 import { render } from 'react-dom';
 import { BrowserRouter, Match, Miss } from 'react-router';
 
