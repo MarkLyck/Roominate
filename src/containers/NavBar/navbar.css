@@ -58,3 +58,8 @@
   transform: translateX(100%);
   transition: transform 300ms ease-in;
 }
+
+.main-container {
+  position: relative;
+  top: 64px;
+}

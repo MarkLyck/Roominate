@@ -34,20 +34,25 @@ class NavBar extends Component {
     }
 
     return (
-      <header>
-        <nav className="navbar">
-          <h3>Roominate</h3>
-          <button className="button" onClick={this.toggleDrawer}>
-            <i className="material-icons">menu</i>
-          </button>
-        </nav>
-        <TransitionGroup
-          transitionName="example"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
-          {Drawer}
-        </TransitionGroup>
-      </header>
+      <div>
+        <header>
+          <nav className="navbar">
+            <h3>Roominate</h3>
+            <button className="button" onClick={this.toggleDrawer}>
+              <i className="material-icons">menu</i>
+            </button>
+          </nav>
+          <TransitionGroup
+            transitionName="example"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}>
+            {Drawer}
+          </TransitionGroup>
+        </header>
+        <main className="main-container">
+          {this.props.children}
+        </main>
+      </div>
     )
   }
 }
