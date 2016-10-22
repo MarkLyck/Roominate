@@ -1,0 +1,17 @@
+@import '../../../../node_modules/bulma/css/bulma.css';
+
+.center {
+  text-align: center;
+}
+
+.Login-header {
+  font-size: 30px;
+  margin: 50px auto;
+}
+
+.login-form-main {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+}
