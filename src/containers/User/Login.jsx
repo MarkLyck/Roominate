@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './styles/login.css';
 
-class Login extends Component {
+class Login extends React.Component {
   render() {
     return (
       <div className="Login">
-
         <div className="Login-header center">
           <h1>Log In</h1>
         </div>
@@ -29,7 +28,6 @@ class Login extends Component {
         <div>
           <p>New to Roominate? <a href="#">Sign up!</a></p>
         </div>
-
       </div>
     );
   }
