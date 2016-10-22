@@ -1,6 +1,5 @@
-@import '../node_modules/bulma/css/bulma.css';
-
-$blue: #056ef0;
+@import './variables';
+@import '../../node_modules/bulma/css/bulma.css';
 
 .App {
   text-align: center;
@@ -12,7 +11,7 @@ $blue: #056ef0;
 }
 
 .App-header {
-  background-color: $blue;
+  background-color: #555;
   height: 150px;
   padding: 20px;
   color: white;

@@ -1,5 +1,8 @@
 ### Find Compatible Roommates
 
+#Description
+Find Roommates based on criteria
+
 #Technologies
 
 ## Front End
