@@ -52,6 +52,7 @@
   "dependencies": {
     "bulma": "^0.2.3",
     "react": "^15.3.2",
+    "react-addons-css-transition-group": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^4.0.0-alpha.5"
   },
