@@ -1,0 +1,35 @@
+@import '../../../../node_modules/bulma/css/bulma.css';
+
+.center {
+  text-align: center;
+}
+
+.page-header {
+  font-size: 30px;
+  margin: 80px auto 15px auto;
+}
+
+.login-signup-form-main {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.control {
+  margin: 15px;
+}
+
+.login-signup-input {
+  height: 40px;
+}
+
+.login-signup-button {
+  width: 100%;
+  height: 40px;
+  margin: 25px auto 10px auto;
+}
+
+.forgot-password {
+  text-decoration: underline;
+}

@@ -1,32 +1,45 @@
 import React, { Component } from 'react';
-import './styles/login.css';
+import './styles/login-signup.css';
+import {Link} from 'react-router';
+import Redirect from 'react-router/Redirect';
 
 class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.validate = this.validate.bind(this);
+    this.state = {redirect: false};
+  }
+
+  validate() {
+    if (this.refs.email.value && this.refs.password.value) {
+      this.setState({redirect: true});
+    } else {
+      alert("The email and password combination can't be found. Please try again.");
+    }
+  }
+
   render() {
+    if (this.state.redirect) {
+      return <Redirect to="/browse"/>
+    }
     return (
       <div className="Login">
-        <div className="Login-header center">
+        <div className="page-header center">
           <h1>Log In</h1>
         </div>
 
-        <div className="login-form-main center">
-          <p className="control has-icon">
-            <input className="input" type="email" placeholder="Email"/>
-            <i className="material-icons">email</i>
-          </p>
-          <p className="control has-icon">
-            <input className="input" type="password" placeholder="Password"/>
-            <i className="material-icons">lock</i>
+        <div className="login-signup-form-main center">
+          <p className="control center">
+            <input className="input login-signup-input" type="email" placeholder="Email" ref="email"/>
           </p>
           <p className="control">
-            <button className="button is-primary">Log In</button>
-            <p>Remember me</p>
-            <button className="button is-link">Forgot Password</button>
+            <input className="input login-signup-input" type="password" placeholder="Password" ref="password"/>
           </p>
-        </div>
-
-        <div>
-          <p>New to Roominate? <a href="#">Sign up!</a></p>
+          <p className="forgot-password"><a href="#">Forgot Password?</a></p>
+          <p className="control">
+            <button className="button is-primary login-signup-button" onClick={this.validate}>Log In</button>
+          </p>
+          <p>New to Roominate? <Link to="/register">Sign Up</Link></p>
         </div>
       </div>
     );
