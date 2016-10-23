@@ -197,7 +197,7 @@ class GetStarted extends React.Component {
             <input type="text" className="age-input" placeholder="enter your age" ref="age" />
           </div>
           <div className="submit-btn">
-            <input type="submit" value="Submit" className="control button is-primary" />
+            <input type="submit" value="Next" className="control button is-primary" />
           </div>
 
         </form>
