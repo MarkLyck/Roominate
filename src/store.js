@@ -5,7 +5,7 @@ let store = {
       email: "mbetz08@cmc.edu",
       first_name: "Amy",
       last_name: "Lachman",
-      age: 20,
+      age: 24,
       image_url: "https://assets.entrepreneur.com/content/16x9/822/20150406145944-dos-donts-taking-perfect-linkedin-profile-picture-selfie-mobile-camera-2.jpeg",
       is_smoker: false,
       has_pets: false,
@@ -14,7 +14,8 @@ let store = {
       sex: "female",
       relationship_status: "coupled",
       temperament: "introvert"
-    }
+    },
+    isLoading: false
   },
   rooms: {
     data: [
@@ -117,8 +118,8 @@ let store = {
         coordinates: [30.2672, -97.7431]
       },
       _id: 'roomid5'
-    },
-    ]
+    }],
+    isLoading: false
   },
   profiles: {
     data: [{
@@ -134,7 +135,8 @@ let store = {
       sex: "female",
       relationship_status: "single",
       temperament: "extrovert"
-    }]
+    }],
+    isLoading: false
   },
   pereferences: {
     data: [{
@@ -148,7 +150,8 @@ let store = {
       sex: null,
       relationship_status: null,
       temperament: null
-    }]
+    }],
+    isLoading: false
   }
 }
 
