@@ -55,7 +55,7 @@ let store = {
       image: 'https://d2k4yjfecjwzua.cloudfront.net/F9559CB5-EEAE-4EF0-A850-B150A28D94E1/197991_ProfileBig.jpg',
       address: {},
       location: {
-        coordinates: [30.2672, -97.7431]
+        coordinates: [30.4672, -97.5431]
       },
       _id: 'roomid2'
     },
@@ -75,7 +75,7 @@ let store = {
       image: 'https://d2k4yjfecjwzua.cloudfront.net/F9559CB5-EEAE-4EF0-A850-B150A28D94E1/197991_ProfileBig.jpg',
       address: {},
       location: {
-        coordinates: [30.2672, -97.7431]
+        coordinates: [30.1672, -97.6431]
       },
       _id: 'roomid3'
     },
@@ -95,7 +95,7 @@ let store = {
       image: 'https://d2k4yjfecjwzua.cloudfront.net/F9559CB5-EEAE-4EF0-A850-B150A28D94E1/197991_ProfileBig.jpg',
       address: {},
       location: {
-        coordinates: [30.2672, -97.7431]
+        coordinates: [30.5672, -97.2431]
       },
       _id: 'roomid4'
     },
@@ -115,7 +115,7 @@ let store = {
       image: 'https://d2k4yjfecjwzua.cloudfront.net/F9559CB5-EEAE-4EF0-A850-B150A28D94E1/197991_ProfileBig.jpg',
       address: {},
       location: {
-        coordinates: [30.2672, -97.7431]
+        coordinates: [30.0672, -97.8431]
       },
       _id: 'roomid5'
     }],
