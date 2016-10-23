@@ -1,0 +1,13 @@
+@import '../../../styles/variables.css';
+
+#get-started {
+  border: 1px solid $primary;
+  .selected {
+    background-color: $primary;
+    color: #fff;
+  }
+}
+
+.hidden {
+  display: none;
+}
