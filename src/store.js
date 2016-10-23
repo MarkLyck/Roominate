@@ -2,10 +2,10 @@
 let store = {
   session: {
       email: "hello@hello.com",
-      first_name: "Hello",
-      last_name: "Bye",
+      first_name: "Amy",
+      last_name: "Lachman",
       age: 20,
-      image_url: "https://static.pexels.com/photos/106567/pexels-photo-106567.jpeg",
+      image_url: "https://assets.entrepreneur.com/content/16x9/822/20150406145944-dos-donts-taking-perfect-linkedin-profile-picture-selfie-mobile-camera-2.jpeg",
       is_smoker: false,
       has_pets: false,
       has_children: false,
