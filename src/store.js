@@ -1,5 +1,20 @@
 
 let store = {
+  session: {
+      email: "hello@hello.com",
+      first_name: "Hello",
+      last_name: "Bye",
+      age: 20,
+      image_url: "https://static.pexels.com/photos/106567/pexels-photo-106567.jpeg",
+      is_smoker: false,
+      has_pets: false,
+      has_children: false,
+      lgbtq_friendly: true,
+      sex: "female",
+      relationship_status: "coupled",
+      temperament: "introvert"
+  },
+
   rooms: {
     data: [
     {
