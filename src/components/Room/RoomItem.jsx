@@ -4,9 +4,9 @@ import './styles/roomItem.css'
 
 const RoomItem = ({ room }) => (
   <Link to={`/browse/${room._id}`} className="room-item">
-    <img src={room.imageURL} alt="room" />
+    <img src={room.image} alt="room" />
     <div className="content">
-      <h3 className="price">${room.price} /m</h3>
+      <h3 className="price">${room.monthly_rent} /m</h3>
       <p className="description">{room.description}</p>
     </div>
   </Link>
