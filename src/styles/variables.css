@@ -1,2 +1,12 @@
 $border-color: rgba(0,0,0,0.1);
 $primary: #31c791;
+$primary-color: #31c791;
+$red-color: #c73150;
+
+.green-color {
+  color: $primary-color;
+}
+
+.red-color {
+  color: $red-color;
+}
