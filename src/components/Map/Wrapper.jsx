@@ -2,6 +2,7 @@ import React from 'react'
 import PlaceMarker from './Marker'
 import { withGoogleMap, GoogleMap } from 'react-google-maps'
 import SearchBox from 'react-google-maps/lib/places/SearchBox'
+import Redirect from 'react-router/Redirect';
 
 class GoogleMapsWrapper extends React.Component {
   constructor(props) {
@@ -22,17 +23,16 @@ class GoogleMapsWrapper extends React.Component {
   }
 
   clickedMarker(room) {
+    console.log('clicked!')
     this.setState({
-      showInfo: true,
+      showRoom: true,
       selectedRoom: room
     })
   }
 
   renderMarkers(rooms) {
-    if (!rooms) {
-      console.error('no rooms');
+    if (!rooms)
       return undefined
-    }
     return rooms.map((room, i) =>
       <PlaceMarker key={i} room={room}
         handleClick={this.clickedMarker} />
@@ -40,6 +40,8 @@ class GoogleMapsWrapper extends React.Component {
   }
 
   render() {
+    if (this.state.showRoom)
+      return <Redirect to={`/browse/${this.state.selectedRoom._id}`}/>
 
     // Styles must be inline to work with react-google-maps
     const SEARCHBOX_STYLE = {

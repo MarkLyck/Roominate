@@ -17,37 +17,40 @@
       background-repeat: no-repeat;
     }
   }
-
-}
-
-.content {
-  padding: 16px 0px 0 0;
-  .title, .description {
-    padding: 0 24px;
-  }
-  .info-list {
-    list-style: none;
-    background: #fff;
-    width: 100%;
-    padding: 0 24px;
-    margin: 0;
-    .info-item {
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+  .content {
+    padding: 32px 0px 0 0;
+    .title, .description {
+      padding: 0 24px;
+    }
+    .description {
+      margin-bottom: 32px;
+    }
+    .info-list {
       list-style: none;
-      border-bottom: 1px solid $border-color;
-      h4 {
-        padding: 0;
-        margin: 0;
-      }
-      &:last-child {
-        border-bottom: none;
+      background: #fff;
+      width: 100%;
+      padding: 0 24px;
+      margin: 0;
+      .info-item {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        border-bottom: 1px solid $border-color;
+        h4 {
+          padding: 0;
+          margin: 0;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
       }
     }
   }
+
 }
+
 
 @media (max-width: 480px) {
   .room-page {
