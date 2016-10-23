@@ -13,26 +13,38 @@ class Browse extends Component {
     this.handleMapMounted = this.handleMapMounted.bind(this)
 
     this.state = {
-      rooms: store.rooms.data
+      rooms: store.rooms.data,
+      center: {lat: 30.2672, lng: -97.7431}
     }
   }
 
+  componentDidMount() {
+    // this.setState({ center: {lat: 56.26392000000001, lng: 9.50178500000004} })
+  }
+
   handleMapMounted(map) {
-    console.log('mounting map')
     this._map = map
   }
 
-  handlePlacesChanged(places) {
-    console.log(places)
-    // this.setState({ mapCener:  })
+  handlePlacesChanged() {
+    const places = this._searchBox.getPlaces()
+    console.log(this._map)
+
+    if (places.length) {
+      const lat = places[0].geometry.location.lat()
+      const lng = places[0].geometry.location.lng()
+      this.setState({ center: {lat: lat, lng: lng} })
+      // this._map.setCenter({lat: lat, lng: lng})
+    }
+    // this.setState({ center: {lat: 56.26392000000001, lng: 9.50178500000004} })
   }
 
   handleSearchBoxMounted(searchBox) {
-    console.log('mounting box');
     this._searchBox = searchBox
   }
 
   render() {
+    console.log(this.state.center)
     let rooms = store.rooms.data.map((room, i) => {
       return (<RoomItem room={room} key={i} />)
     })
@@ -41,7 +53,7 @@ class Browse extends Component {
         <GoogleMapsWrapper
           containerElement={ <div className="map-container" style={{ height: '100%' }} /> }
           mapElement={ <div style={{ height: '100%' }} /> }
-          center={[30.2672, -97.7431]}
+          center={this.state.center}
           rooms={this.state.rooms}
           zoom={10}
           onPlacesChanged={this.handlePlacesChanged}

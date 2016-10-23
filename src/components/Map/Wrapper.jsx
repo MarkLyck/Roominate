@@ -23,7 +23,6 @@ class GoogleMapsWrapper extends React.Component {
   }
 
   clickedMarker(room) {
-    console.log('clicked!')
     this.setState({
       showRoom: true,
       selectedRoom: room
@@ -62,7 +61,8 @@ class GoogleMapsWrapper extends React.Component {
     return <GoogleMap
         ref={this.props.onMapMounted}
         defaultZoom={this.props.zoom}
-        defaultCenter={{ lat: this.props.center[0], lng: this.props.center[1] }}
+        defaultCenter={this.props.center}
+        center={this.props.center}
         mapTypeControl={false}
         onClick={this.clickedMap}
         options={{
@@ -71,6 +71,7 @@ class GoogleMapsWrapper extends React.Component {
         }}>
 
         <SearchBox
+          ref={this.props.onSearchBoxMounted}
           inputPlaceholder="Search"
           inputStyle={SEARCHBOX_STYLE}
           controlPosition={2}
