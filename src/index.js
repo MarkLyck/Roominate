@@ -9,6 +9,7 @@ import Register from './containers/User/Register';
 import GetStarted from './containers/User/GetStarted';
 import Profile from './containers/User/Profile';
 import Browse from './containers/Browse/Browse';
+import RoomPage from './containers/Browse/RoomPage';
 import NotFound from './containers/NotFound/NotFound';
 
 import './styles/main.css'
@@ -21,7 +22,8 @@ const Root = () => {
         <Match exactly pattern='/register' component={Register} />
         <Match exactly pattern='/get-started' component={GetStarted} />
         <Match exactly pattern='/profile' component={Profile} />
-        <Match exactly pattern='/browse' component={Browse} />
+        <Match exactly pattern='/browse' component={Browse}/>
+        <Match exactly pattern='/browse/:id' component={RoomPage}/>
         <Match exactly pattern='/404' component={NotFound} />
         <Miss component={NotFound} />
       </NavBar>
