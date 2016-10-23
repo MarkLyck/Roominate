@@ -1,0 +1,13 @@
+@import '../../../styles/variables.css';
+
+#not-found{
+  padding: 1rem;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+}

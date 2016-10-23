@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/get-started.css';
+import Redirect from 'react-router/Redirect';
 
 class GetStarted extends React.Component {
   constructor(props) {
@@ -43,9 +44,16 @@ class GetStarted extends React.Component {
     const newState = this.state;
     newState['age'] = this.refs.age.value;
     console.log('state after submit', newState);
+    if (newState['has_pets']) {
+      this.setState({started: true})
+    }
   }
 
   render() {
+    if (this.state.started) {
+      return <Redirect to="/preferences"/>
+    }
+
     return (
       <div id="criteria">
         <h1>Let's get started!</h1>
