@@ -169,7 +169,7 @@ class Profile extends React.Component {
         </section>
 
         {this.state.chatting ? <ChatView profile={profile} /> : ''}
-        {profile.email === store.session.data.email ? <a className="button is-primary floating-round-btn" onClick={() => this.setState({ chatting: !this.state.chatting })}><i className="material-icons">message</i></a> : <Link className="button is-primary edit floating-round-btn" to="/profile/edit"><i className="material-icons">edit</i></Link>}
+        {profile.email !== store.session.data.email ? <a className="button is-primary floating-round-btn" onClick={() => this.setState({ chatting: !this.state.chatting })}><i className="material-icons">message</i></a> : <Link className="button is-primary edit floating-round-btn" to="/profile/edit"><i className="material-icons">edit</i></Link>}
       </div>
     );
   }
