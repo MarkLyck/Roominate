@@ -8,7 +8,7 @@ class RoomPage extends Component {
     super(props)
 
     const room = store.rooms.data.filter((room) => {
-      if (props.params.id === room._id)
+      if (props.params.id === room.id)
         return true
       else
         return false

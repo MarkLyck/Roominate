@@ -40,7 +40,7 @@ class GoogleMapsWrapper extends React.Component {
 
   render() {
     if (this.state.showRoom)
-      return <Redirect to={`/browse/${this.state.selectedRoom._id}`}/>
+      return <Redirect to={`/browse/${this.state.selectedRoom.id}`}/>
 
     // Styles must be inline to work with react-google-maps
     const SEARCHBOX_STYLE = {

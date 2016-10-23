@@ -39,7 +39,7 @@ let store = {
       location: {
         coordinates: [30.2672, -97.7431]
       },
-      _id: 'roomid1'
+      id: 'roomid1'
     },
     {
       monthly_rent: 765,
@@ -59,7 +59,7 @@ let store = {
       location: {
         coordinates: [30.4672, -97.5431]
       },
-      _id: 'roomid2'
+      id: 'roomid2'
     },
     {
       monthly_rent: 765,
@@ -79,7 +79,7 @@ let store = {
       location: {
         coordinates: [30.1672, -97.6431]
       },
-      _id: 'roomid3'
+      id: 'roomid3'
     },
     {
       monthly_rent: 765,
@@ -99,7 +99,7 @@ let store = {
       location: {
         coordinates: [30.5672, -97.2431]
       },
-      _id: 'roomid4'
+      id: 'roomid4'
     },
     {
       monthly_rent: 765,
@@ -119,7 +119,7 @@ let store = {
       location: {
         coordinates: [30.0672, -97.8431]
       },
-      _id: 'roomid5'
+      id: 'roomid5'
     }],
     isLoading: false
   },
