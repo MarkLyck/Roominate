@@ -1,7 +1,8 @@
 
 let store = {
   session: {
-      email: "hello@hello.com",
+    data: {
+      email: "mbetz08@cmc.edu",
       first_name: "Amy",
       last_name: "Lachman",
       age: 20,
@@ -13,8 +14,8 @@ let store = {
       sex: "female",
       relationship_status: "coupled",
       temperament: "introvert"
+    }
   },
-
   rooms: {
     data: [
     {
@@ -119,7 +120,36 @@ let store = {
     },
     ]
   },
-  users: []
+  profiles: {
+    data: [{
+      email: "mbetz08@cmc.edu",
+      first_name: "Mickie",
+      last_name: "Betz",
+      age: 24,
+      image_url: "https://assets.entrepreneur.com/content/16x9/822/20150406145944-dos-donts-taking-perfect-linkedin-profile-picture-selfie-mobile-camera-2.jpeg",
+      is_smoker: false,
+      has_pets: true,
+      has_children: false,
+      lgbtq_friendly: true,
+      sex: "female",
+      relationship_status: "single",
+      temperament: "extrovert"
+    }]
+  },
+  pereferences: {
+    data: [{
+      profile: 'mbetz08@cmc.edu',
+      minimum_age: 21,
+      maximum_age: 35,
+      is_smoker: false,
+      has_pets: false,
+      has_children: false,
+      lgbtq_friendly: true,
+      sex: null,
+      relationship_status: null,
+      temperament: null
+    }]
+  }
 }
 
 export default store
