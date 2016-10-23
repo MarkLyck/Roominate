@@ -1,6 +1,15 @@
 @import '../../../node_modules/bulma/css/bulma.css';
 @import '../../styles/variables.css';
 
+@font-face {font-family: 'PNSoft';
+    src: url("//db.onlinewebfonts.com/t/7ad138835c0cf9f05a9f0ab343247612.eot");
+    src: url("//db.onlinewebfonts.com/t/7ad138835c0cf9f05a9f0ab343247612.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/7ad138835c0cf9f05a9f0ab343247612.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/7ad138835c0cf9f05a9f0ab343247612.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/7ad138835c0cf9f05a9f0ab343247612.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/7ad138835c0cf9f05a9f0ab343247612.svg#ProximaNovaSoftW03-Bold") format("svg");
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -15,9 +24,28 @@
   box-shadow: 0 4px 10px rgba(0,0,0, 0.1);
   z-index: 1000;
   max-width: 100vw;
+  .nav-title {
+    font-family: PNSoft;
+    font-size: 1.75rem;
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   .button {
     border: none;
     background: none;
+    i {
+      color: $primary-color;
+    }
+    .close {
+      color: #555;
+    }
   }
 }
 
