@@ -1,22 +1,31 @@
 import React from 'react';
 import './styles/get-started.css';
 import Redirect from 'react-router/Redirect';
+import $ from 'jquery';
 
 class GetStarted extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      has_pets: null,
-      has_cats: false,
-      has_dogs: false,
-      is_smoker: null,
-      lgbtq_friendly: null,
-      has_children: null,
-      sex: "",
-      relationship_status: "",
-      temperament: "",
-      age: null
-    };
+    let state;
+    if (localStorage.profile) {
+      state = localStorage.profile.email
+    } else {
+      state = {
+        profile: 'dana.lachman@gmail.com',
+        has_pets: null,
+        has_cats: false,
+        has_dogs: false,
+        is_smoker: null,
+        lgbtq_friendly: null,
+        has_children: null,
+        sex: '',
+        relationship_status: '',
+        temperament: '',
+        age: null,
+        seeking: 'Room'
+      }
+    }
+    this.state = state;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -29,7 +38,6 @@ class GetStarted extends React.Component {
 
   toggleValue(key) {
     let value = false;
-    console.log(this.state[key])
     if (!this.state[key]) {
       value = true;
     }
@@ -43,10 +51,22 @@ class GetStarted extends React.Component {
     e.preventDefault();
     const newState = this.state;
     newState['age'] = this.refs.age.value;
-    console.log('state after submit', newState);
-    if (newState['has_pets']) {
-      this.setState({started: true})
-    }
+    // console.log('state after submit', newState);
+    this.setState({started: true});
+    // $.ajax({
+    //   type: "POST",
+    //   data: newState,
+    //   url: 'http://a8509e9d.ngrok.io/roominate/profile/',
+    //   error: (msg) => {
+    //     // temp solution because of PUT issues
+    //     this.setState({started: true});
+    //     console.log('you failed', msg);
+    //   },
+    //   success: (data) => {
+    //     console.log(data);
+    //       this.setState({started: true});
+    //     }
+    //   });
   }
 
   render() {
