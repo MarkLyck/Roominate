@@ -8,6 +8,7 @@
   background: #fff;
   box-shadow: 0 2px 2px rgba(0,0,0,0.26), 0 0 4px rgba(0,0,0,0.18);
   width: calc(100% - 48px);
+  max-width: 400px;
   height: calc(100% - 256px);
   margin: 0px 24px;
   &::after {
