@@ -44,12 +44,28 @@
 }
 
 .age-input {
-  padding: 1rem;
   width: 4rem;
-  height: 1rem;
+  font-size: 1rem;
+  height: 2.5rem;
+  padding-left: 0.5rem;
 }
 
 .submit-btn {
   margin-top: 2rem;
   text-align: right;
+}
+
+#gender {
+  input:last-child {
+    margin-top: 1rem;
+  }
+}
+
+/* media queries for devices larger than mobile phone in portrait mode */
+@media screen and (min-width: 449px){
+  #gender {
+    input:last-child {
+      margin-top: 0;
+    }
+  }
 }

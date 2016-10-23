@@ -11,6 +11,7 @@ import GetStarted from './containers/User/GetStarted';
 import Profile from './containers/User/Profile';
 import Browse from './containers/Browse/Browse';
 import RoomPage from './containers/Browse/RoomPage';
+import Preferences from './containers/User/Preferences';
 import NotFound from './containers/NotFound/NotFound';
 import store from './store'
 import './styles/main.css'
@@ -51,6 +52,7 @@ const Root = () => {
         <Match exactly pattern='/' component={Login} />
         <Match exactly pattern='/register' component={Register} />
         <Match exactly pattern='/get-started' component={GetStarted} />
+        <Match exactly pattern='/preferences' component={Preferences} />
         <Match exactly pattern='/profile' component={Profile} />
         <Match exactly pattern='/browse' component={Browse}/>
         <Match exactly pattern='/browse/:id' component={RoomPage}/>
