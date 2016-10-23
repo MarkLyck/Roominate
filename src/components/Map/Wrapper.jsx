@@ -2,6 +2,7 @@ import React from 'react'
 import PlaceMarker from './Marker'
 import { withGoogleMap, GoogleMap } from 'react-google-maps'
 import SearchBox from 'react-google-maps/lib/places/SearchBox'
+import Redirect from 'react-router/Redirect'
 
 class GoogleMapsWrapper extends React.Component {
   constructor(props) {
@@ -23,16 +24,14 @@ class GoogleMapsWrapper extends React.Component {
 
   clickedMarker(room) {
     this.setState({
-      showInfo: true,
+      showRoom: true,
       selectedRoom: room
     })
   }
 
   renderMarkers(rooms) {
-    if (!rooms) {
-      console.error('no rooms');
+    if (!rooms)
       return undefined
-    }
     return rooms.map((room, i) =>
       <PlaceMarker key={i} room={room}
         handleClick={this.clickedMarker} />
@@ -40,6 +39,9 @@ class GoogleMapsWrapper extends React.Component {
   }
 
   render() {
+    console.log(this.props)
+    if (this.state.showRoom)
+      return <Redirect to={`/browse/${this.state.selectedRoom._id}`}/>
 
     // Styles must be inline to work with react-google-maps
     const SEARCHBOX_STYLE = {
@@ -57,9 +59,10 @@ class GoogleMapsWrapper extends React.Component {
     }
 
     return <GoogleMap
-        ref={this.props.onMapLoad}
+        ref={this.props.onMapMounted}
         defaultZoom={this.props.zoom}
-        defaultCenter={{ lat: this.props.center[0], lng: this.props.center[1] }}
+        defaultCenter={this.props.center}
+        center={this.props.center}
         mapTypeControl={false}
         onClick={this.clickedMap}
         options={{
@@ -67,13 +70,15 @@ class GoogleMapsWrapper extends React.Component {
           streetViewControl: false
         }}>
 
-        {this.renderMarkers(this.props.rooms)}
-
         <SearchBox
+          ref={this.props.onSearchBoxMounted}
           inputPlaceholder="Search"
           inputStyle={SEARCHBOX_STYLE}
           controlPosition={2}
+          onPlacesChanged={this.props.onPlacesChanged}
           />
+
+        {this.renderMarkers(this.props.rooms)}
 
       </GoogleMap>
   }
