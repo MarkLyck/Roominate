@@ -46,7 +46,6 @@ class Browse extends Component {
   }
 
   render() {
-    console.log('ROOMS: ', this.state.rooms)
     let rooms
     if (store.rooms.data) {
       rooms = store.rooms.data.map((room, i) => {
