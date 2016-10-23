@@ -19,6 +19,7 @@ class Profile extends React.Component {
             else return false
           })[0]
         } else {
+          // TODO this should pull profile from room profile.
           profile = store.session.data
         }
       } else {
@@ -26,7 +27,6 @@ class Profile extends React.Component {
       }
 
       const pereference = store.pereferences.data.filter((pereference) => {
-        console.log(pereference);
         if (pereference.profile === profile.email)
           return true
         else

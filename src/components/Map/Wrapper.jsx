@@ -39,7 +39,6 @@ class GoogleMapsWrapper extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     if (this.state.showRoom)
       return <Redirect to={`/browse/${this.state.selectedRoom._id}`}/>
 
