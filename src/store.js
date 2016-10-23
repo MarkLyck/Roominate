@@ -1,11 +1,12 @@
 
 let store = {
   session: {
-      email: "hello@hello.com",
-      first_name: "Hello",
-      last_name: "Bye",
-      age: 20,
-      image_url: "https://static.pexels.com/photos/106567/pexels-photo-106567.jpeg",
+    data: {
+      email: "mbetz08@cmc.edu",
+      first_name: "Amy",
+      last_name: "Lachman",
+      age: 24,
+      image_url: "https://assets.entrepreneur.com/content/16x9/822/20150406145944-dos-donts-taking-perfect-linkedin-profile-picture-selfie-mobile-camera-2.jpeg",
       is_smoker: false,
       has_pets: false,
       has_children: false,
@@ -13,8 +14,9 @@ let store = {
       sex: "female",
       relationship_status: "coupled",
       temperament: "introvert"
+    },
+    isLoading: false
   },
-
   rooms: {
     data: [
     {
@@ -116,10 +118,41 @@ let store = {
         coordinates: [30.2672, -97.7431]
       },
       _id: 'roomid5'
-    },
-    ]
+    }],
+    isLoading: false
   },
-  users: []
+  profiles: {
+    data: [{
+      email: "mbetz08@cmc.edu",
+      first_name: "Mickie",
+      last_name: "Betz",
+      age: 24,
+      image_url: "https://assets.entrepreneur.com/content/16x9/822/20150406145944-dos-donts-taking-perfect-linkedin-profile-picture-selfie-mobile-camera-2.jpeg",
+      is_smoker: false,
+      has_pets: true,
+      has_children: false,
+      lgbtq_friendly: true,
+      sex: "female",
+      relationship_status: "single",
+      temperament: "extrovert"
+    }],
+    isLoading: false
+  },
+  pereferences: {
+    data: [{
+      profile: 'mbetz08@cmc.edu',
+      minimum_age: 21,
+      maximum_age: 35,
+      is_smoker: false,
+      has_pets: false,
+      has_children: false,
+      lgbtq_friendly: true,
+      sex: null,
+      relationship_status: null,
+      temperament: null
+    }],
+    isLoading: false
+  }
 }
 
 export default store
