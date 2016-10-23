@@ -1,15 +1,12 @@
 import React from 'react';
 import './styles/get-started.css';
 import Redirect from 'react-router/Redirect';
-import $ from 'jquery';
 
 class GetStarted extends React.Component {
   constructor(props) {
     super(props);
     let state;
-    if (localStorage.profile) {
-      state = localStorage.profile.email
-    } else {
+
       state = {
         profile: 'dana.lachman@gmail.com',
         has_pets: null,
@@ -24,7 +21,6 @@ class GetStarted extends React.Component {
         age: null,
         seeking: 'Room'
       }
-    }
     this.state = state;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
