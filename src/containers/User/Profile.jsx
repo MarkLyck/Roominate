@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router'
 
 import store from '../../store'
+import ChatView from '../../components/User/ChatView'
 import './styles/profile.css';
 
 class Profile extends React.Component {
@@ -35,7 +36,8 @@ class Profile extends React.Component {
 
       this.state = {
         profile: profile,
-        pereference: pereference
+        pereference: pereference,
+        chatting: false
       }
     }
 
@@ -121,7 +123,8 @@ class Profile extends React.Component {
           </ul>
         </section>
 
-        {profile.email !== store.session.data.email ? <a className="button is-primary contact" href={`mailto:${profile.email}`}>Contact {profile.first_name}</a> : <Link className="button is-primary contact" to="/profile/edit">Edit profile</Link>}
+        {this.state.chatting ? <ChatView profile={profile} /> : ''}
+        {profile.email === store.session.data.email ? <a className="button is-primary floating-round-btn" onClick={() => this.setState({ chatting: !this.state.chatting })}><i className="material-icons">message</i></a> : <Link className="button is-primary edit floating-round-btn" to="/profile/edit"><i className="material-icons">edit</i></Link>}
       </div>
     );
   }
