@@ -3,7 +3,9 @@
 #criteria {
   h1 {
     font-size: 2rem;
-    margin: 2rem;
+    padding: 2rem;
+    background: $primary-color;
+    color: #fff;
   }
 }
 
@@ -51,4 +53,3 @@
   margin-top: 2rem;
   text-align: right;
 }
-// border-bottom: 1px solid rgba(0,0,0,0.1);
