@@ -3,6 +3,7 @@ import store from '../../store.js'
 import GoogleMapsWrapper from '../../components/Map/Wrapper'
 import RoomItem from '../../components/Room/RoomItem'
 import './styles/browse.css'
+import { getRooms } from '../../helpers'
 
 class Browse extends Component {
   constructor(props) {
@@ -18,13 +19,20 @@ class Browse extends Component {
     }
   }
 
+  componentDidMount() {
+    if (!store.rooms.data.length) {
+      getRooms().then((rooms) => {
+        this.setState({ rooms: store.rooms.data })
+      })
+    }
+  }
+
   handleMapMounted(map) {
     this._map = map
   }
 
   handlePlacesChanged() {
     const places = this._searchBox.getPlaces()
-    console.log(this._map)
 
     if (places.length) {
       const lat = places[0].geometry.location.lat()
@@ -38,9 +46,12 @@ class Browse extends Component {
   }
 
   render() {
-    let rooms = store.rooms.data.map((room, i) => {
-      return (<RoomItem room={room} key={i} />)
-    })
+    let rooms
+    if (store.rooms.data) {
+      rooms = store.rooms.data.map((room, i) => {
+        return (<RoomItem room={room} key={i} />)
+      })
+    }
     return (
       <div className="browse">
         <GoogleMapsWrapper
