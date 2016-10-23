@@ -44,8 +44,8 @@ class NavBar extends Component {
           </nav>
           <TransitionGroup
             transitionName="example"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}>
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={200}>
             {Drawer}
           </TransitionGroup>
         </header>

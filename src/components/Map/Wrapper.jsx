@@ -40,6 +40,7 @@ class GoogleMapsWrapper extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     if (this.state.showRoom)
       return <Redirect to={`/browse/${this.state.selectedRoom._id}`}/>
 
@@ -59,7 +60,7 @@ class GoogleMapsWrapper extends React.Component {
     }
 
     return <GoogleMap
-        ref={this.props.onMapLoad}
+        ref={this.props.onMapMounted}
         defaultZoom={this.props.zoom}
         defaultCenter={{ lat: this.props.center[0], lng: this.props.center[1] }}
         mapTypeControl={false}
@@ -69,13 +70,14 @@ class GoogleMapsWrapper extends React.Component {
           streetViewControl: false
         }}>
 
-        {this.renderMarkers(this.props.rooms)}
-
         <SearchBox
           inputPlaceholder="Search"
           inputStyle={SEARCHBOX_STYLE}
           controlPosition={2}
+          onPlacesChanged={this.props.onPlacesChanged}
           />
+
+        {this.renderMarkers(this.props.rooms)}
 
       </GoogleMap>
   }
