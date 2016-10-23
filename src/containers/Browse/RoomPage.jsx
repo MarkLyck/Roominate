@@ -2,20 +2,30 @@ import React, { Component } from 'react'
 import store from '../../store'
 import './styles/roomPage.css'
 import Profile from '../User/Profile'
+import { getRooms } from '../../helpers'
 
 class RoomPage extends Component {
   constructor(props) {
     super(props)
 
-    const room = store.rooms.data.filter((room) => {
-      if (props.params.id === room.id)
-        return true
-      else
-        return false
-    })
+    this.state = { room: {} }
+  }
 
-    this.state = {
-      room: room[0]
+  componentDidMount() {
+    if (store.rooms.data.length) {
+      store.rooms.data.forEach((room) => {
+        if (Number(this.props.params.id) === Number(room.id))
+          this.setState({ room: room })
+      })
+    } else {
+      getRooms().then((rooms) => {
+
+        rooms.forEach((room) => {
+          if (Number(this.props.params.id) === Number(room.id)) {
+            this.setState({ room: room })
+          }
+        })
+      })
     }
   }
 
@@ -25,7 +35,7 @@ class RoomPage extends Component {
     return (
       <div className="room-page">
         <div className="slider">
-          <div className="room-image" style={{ backgroundImage: `url(${room.image})`}}/>
+          <div className="room-image" style={{ backgroundImage: `url(${room.image_url})`}}/>
         </div>
         <section className="content">
           <h3 className="title">{room.title}</h3>
@@ -58,7 +68,7 @@ class RoomPage extends Component {
           </ul>
         </section>
         <section className="profile">
-          <Profile/>
+          <Profile email={room.tenant}/>
         </section>
       </div>
     )

@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from './containers/NavBar/NavBar';
 import { render } from 'react-dom';
 import { BrowserRouter, Match, Miss } from 'react-router';
+// import $ from 'jquery'
 
 import Login from './containers/User/Login';
 import Register from './containers/User/Register';
@@ -11,8 +12,37 @@ import Profile from './containers/User/Profile';
 import Browse from './containers/Browse/Browse';
 import RoomPage from './containers/Browse/RoomPage';
 import NotFound from './containers/NotFound/NotFound';
-
+import store from './store'
 import './styles/main.css'
+
+
+
+// store.profiles.isLoading = true
+// $.ajax('http://a8509e9d.ngrok.io/roominate/profile/').then((response) => {
+//   store.profiles.data = response
+//   store.profiles.isLoading = false
+//   console.log(response)
+// })
+//
+// store.addresses.isLoading = true
+// $.ajax('http://a8509e9d.ngrok.io/roominate/address/').then((response) => {
+//   store.addresses.data = response
+//   store.addresses.isLoading = false
+//   console.log(response)
+// })
+//
+// store.preferences.isLoading = true
+// $.ajax('http://a8509e9d.ngrok.io/roominate/preferences/').then((response) => {
+//   store.preferences.data = response
+//   store.preferences.isLoading = false
+//   console.log(response)
+// })
+
+if (localStorage.email) {
+  store.session.data = store.profiles.data.filter((profile) => {
+    return (profile.email === localStorage.email) ? true : false
+  })[0]
+}
 
 const Root = () => {
   return (
