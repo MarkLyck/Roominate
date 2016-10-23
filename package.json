@@ -50,6 +50,7 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "bulma": "^0.2.3",
     "es6-promise": "^4.0.5",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.1.1",
