@@ -7,6 +7,7 @@ let store = {
       email: "mbetz08@cmc.edu",
       first_name: "Amy",
       last_name: "Lachman",
+      seeking: "roommate",
       age: 24,
       image_url: "https://assets.entrepreneur.com/content/16x9/822/20150406145944-dos-donts-taking-perfect-linkedin-profile-picture-selfie-mobile-camera-2.jpeg",
       is_smoker: false,
