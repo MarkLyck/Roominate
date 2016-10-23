@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/get-started.css';
+import Redirect from 'react-router/Redirect';
 import $ from 'jquery';
 
 class Preferences extends React.Component {
@@ -45,20 +46,24 @@ class Preferences extends React.Component {
     newState['minimum_age'] = this.refs.min.value;
     newState['maximum_age'] = this.refs.max.value;
     console.log('state after submit', newState);
-    $.ajax({
-      type: "POST",
-      data: newState,
-      url: 'http://a8509e9d.ngrok.io/roominate/preferences/',
-      error: function(msg) {
-        console.log('you failed', msg);
-      },
-      success: function(data) {
-        console.log(data);
-      }
-    });
+    this.setState({ redirect: true })
+    // $.ajax({
+    //   type: "POST",
+    //   data: newState,
+    //   url: 'http://a8509e9d.ngrok.io/roominate/preferences/',
+    //   error: function(msg) {
+    //     console.log('you failed', msg);
+    //   },
+    //   success: function(data) {
+    //     console.log(data);
+    //   }
+    // });
   }
 
   render() {
+    if (this.state.redirect) {
+      return <Redirect to="/browse"/>
+    }
     return (
       <div id="criteria">
         <h1>Tell us about your preferences.</h1>
