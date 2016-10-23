@@ -8,9 +8,33 @@ class Browse extends Component {
   constructor(props) {
     super(props)
 
+    this.handleSearchBoxMounted = this.handleSearchBoxMounted.bind(this)
+    this.handlePlacesChanged = this.handlePlacesChanged.bind(this)
+    this.handleMapMounted = this.handleMapMounted.bind(this)
+
     this.state = {
-      rooms: store.rooms.data
+      rooms: store.rooms.data,
+      center: {lat: 30.2672, lng: -97.7431}
     }
+  }
+
+  handleMapMounted(map) {
+    this._map = map
+  }
+
+  handlePlacesChanged() {
+    const places = this._searchBox.getPlaces()
+    console.log(this._map)
+
+    if (places.length) {
+      const lat = places[0].geometry.location.lat()
+      const lng = places[0].geometry.location.lng()
+      this.setState({ center: {lat: lat, lng: lng} })
+    }
+  }
+
+  handleSearchBoxMounted(searchBox) {
+    this._searchBox = searchBox
   }
 
   render() {
@@ -22,9 +46,12 @@ class Browse extends Component {
         <GoogleMapsWrapper
           containerElement={ <div className="map-container" style={{ height: '100%' }} /> }
           mapElement={ <div style={{ height: '100%' }} /> }
-          center={[30.2672, -97.7431]}
+          center={this.state.center}
           rooms={this.state.rooms}
           zoom={10}
+          onPlacesChanged={this.handlePlacesChanged}
+          onMapMounted={this.handleMapMounted}
+          onSearchBoxMounted={this.handleSearchBoxMounted}
           />
         <ul>
           {rooms}

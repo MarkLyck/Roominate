@@ -39,13 +39,13 @@ class NavBar extends Component {
           <nav className="navbar">
             <h3>Roominate</h3>
             <button className="button" onClick={this.toggleDrawer}>
-              <i className="material-icons">menu</i>
+              <i className="material-icons">{this.state.drawerOpen ? 'clear' : 'menu' }</i>
             </button>
           </nav>
           <TransitionGroup
             transitionName="example"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}>
+            transitionEnterTimeout={300}
+            transitionLeaveTimeout={200}>
             {Drawer}
           </TransitionGroup>
         </header>
