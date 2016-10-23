@@ -18,10 +18,6 @@ class Browse extends Component {
     }
   }
 
-  componentDidMount() {
-    // this.setState({ center: {lat: 56.26392000000001, lng: 9.50178500000004} })
-  }
-
   handleMapMounted(map) {
     this._map = map
   }
@@ -34,9 +30,7 @@ class Browse extends Component {
       const lat = places[0].geometry.location.lat()
       const lng = places[0].geometry.location.lng()
       this.setState({ center: {lat: lat, lng: lng} })
-      // this._map.setCenter({lat: lat, lng: lng})
     }
-    // this.setState({ center: {lat: 56.26392000000001, lng: 9.50178500000004} })
   }
 
   handleSearchBoxMounted(searchBox) {
@@ -44,7 +38,6 @@ class Browse extends Component {
   }
 
   render() {
-    console.log(this.state.center)
     let rooms = store.rooms.data.map((room, i) => {
       return (<RoomItem room={room} key={i} />)
     })

@@ -2,7 +2,7 @@ import React from 'react'
 import PlaceMarker from './Marker'
 import { withGoogleMap, GoogleMap } from 'react-google-maps'
 import SearchBox from 'react-google-maps/lib/places/SearchBox'
-import Redirect from 'react-router/Redirect';
+import Redirect from 'react-router/Redirect'
 
 class GoogleMapsWrapper extends React.Component {
   constructor(props) {
