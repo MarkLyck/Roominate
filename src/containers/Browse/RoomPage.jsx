@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import store from '../../store'
 import './styles/roomPage.css'
+import Profile from '../User/Profile'
 
 class RoomPage extends Component {
   constructor(props) {
@@ -57,7 +58,7 @@ class RoomPage extends Component {
           </ul>
         </section>
         <section className="profile">
-          
+          <Profile/>
         </section>
       </div>
     )
