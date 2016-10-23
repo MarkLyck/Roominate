@@ -1,11 +1,17 @@
 @import '../../../styles/variables.css';
 
 #get-started {
-  border: 1px solid $primary;
   .selected {
     background-color: $primary;
     color: #fff;
   }
+  .label {
+    text-align: left;
+  }
+  div {
+    border: 3 px solid $red-color;
+  }
+  border: 3px solid $primary;
 }
 
 .hidden {

@@ -28,6 +28,7 @@ class GetStarted extends React.Component {
 
   toggleValue(key) {
     let value = false;
+    console.log(this.state[key])
     if (!this.state[key]) {
       value = true;
     }
@@ -46,10 +47,10 @@ class GetStarted extends React.Component {
 
   render() {
     return (
-      <form id="get-started" onSubmit={this.handleSubmit}>
+      <form id="get-started" className="content" onSubmit={this.handleSubmit}>
 
-        <div className="control is-horizontal" id="has-pets">
-          <label className="label control-label">I own pets</label>
+        <div className="control" id="has-pets">
+          <label className="label control-label"><h4>I own pets</h4></label>
           <input
             type="button"
             value="yes"
@@ -64,24 +65,24 @@ class GetStarted extends React.Component {
           />
         </div>
 
-        <div className="control is-horizontal" id="pet-true" className={`${!this.state.has_pets ? 'hidden' : ''}`}>
-          <label className="label control-label">pet type</label>
+        <div id="pet-true" className={`control ${!this.state.has_pets ? 'hidden' : ''}`}>
+          <label className="label control-label"><h4>Pet type</h4></label>
           <input
             type="button"
             value="cat(s)"
-            className="control button is-outlined"
-            onClick={this.handleChange.bind(this, 'has_cats', true)}
+            className={`control button ${ this.state.has_cats ? 'selected' : ''}`}
+            onClick={this.toggleValue.bind(this, 'has_cats')}
           />
           <input
             type="button"
             value="dog(s)"
-            className="control button is-outlined"
-            onClick={this.handleChange.bind(this, 'has_dogs', true)}
+            className={`control button ${ this.state.has_dogs ? 'selected' : ''}`}
+            onClick={this.toggleValue.bind(this, 'has_dogs')}
           />
         </div>
 
-        <div className="control is-horizontal" id="is-smoker">
-          <label className="label control-label">I smoke</label>
+        <div className="control" id="is-smoker">
+          <label className="label control-label"><h4>I smoke</h4></label>
           <input
             type="button"
             value="yes"
@@ -96,8 +97,8 @@ class GetStarted extends React.Component {
           />
         </div>
 
-        <div className="control is-horizontal" id="lgbtq-friendly">
-          <label className="label control-label">I am LGBTQ friendly</label>
+        <div className="control" id="lgbtq-friendly">
+          <label className="label control-label"><h4>I am LGBTQ friendly</h4></label>
           <input
             type="button"
             value="yes"
@@ -112,8 +113,8 @@ class GetStarted extends React.Component {
           />
         </div>
 
-        <div className="control is-horizontal" id="parent">
-          <label className="label control-label">I have children</label>
+        <div className="control" id="parent">
+          <label className="label control-label"><h4>I have children</h4></label>
           <input
             type="button"
               value="yes"
@@ -128,8 +129,8 @@ class GetStarted extends React.Component {
           />
         </div>
 
-        <div className="control is-horizontal" id="gender">
-          <label className="label control-label">Gender</label>
+        <div className="control" id="gender">
+          <label className="label control-label"><h4>Gender</h4></label>
           <input
             type="button"
             value="female"
@@ -150,8 +151,8 @@ class GetStarted extends React.Component {
           />
         </div>
 
-        <div className="control is-horizontal" id="relationship-status">
-          <label className="label control-label">Relationship status</label>
+        <div className="control" id="relationship-status">
+          <label className="label control-label"><h4>Relationship status</h4></label>
           <input
             type="button"
             value="single"
@@ -166,8 +167,8 @@ class GetStarted extends React.Component {
           />
         </div>
 
-        <div className="control is-horizontal" id="temperament">
-          <label className="label control-label">Temperament</label>
+        <div className="control" id="temperament">
+          <label className="label control-label"><h4>Temperament</h4></label>
           <input
             type="button"
             value="extrovert"
@@ -182,8 +183,8 @@ class GetStarted extends React.Component {
           />
         </div>
 
-        <div className="control is-horizontal" id="age">
-          <label className="label control-label">Age</label>
+        <div className="control" id="age">
+          <label className="label control-label"><h4>Age</h4></label>
           <input type="text" placeholder="enter your age" ref="age" />
         </div>
 
