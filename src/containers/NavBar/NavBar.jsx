@@ -37,7 +37,7 @@ class NavBar extends Component {
       <div>
         <header>
           <nav className="navbar">
-            <h3>Roominate</h3>
+            <h3 className="nav-title">Roominate</h3>
             <button className="button" onClick={this.toggleDrawer}>
               <i className="material-icons">{this.state.drawerOpen ? 'clear' : 'menu' }</i>
             </button>
