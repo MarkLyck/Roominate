@@ -1,6 +1,25 @@
 @import '../../../styles/variables.css';
 
+#criteria {
+  h1 {
+    font-size: 2rem;
+    margin: 2rem;
+  }
+}
+
 #get-started {
+  h4 {
+    margin-bottom: 1rem;
+  }
+  div:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin: 0;
+  }
+  input {
+    margin: 0 1rem 0 0;
+    width: 8rem;
+  }
   .selected {
     background-color: $primary;
     color: #fff;
@@ -8,12 +27,28 @@
   .label {
     text-align: left;
   }
-  div {
-    border: 3 px solid $red-color;
-  }
-  border: 3px solid $primary;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: white;
 }
 
 .hidden {
   display: none;
 }
+
+.control {
+  margin: 0;
+}
+
+.age-input {
+  padding: 1rem;
+  width: 4rem;
+  height: 1rem;
+}
+
+.submit-btn {
+  margin-top: 2rem;
+  text-align: right;
+}
+// border-bottom: 1px solid rgba(0,0,0,0.1);
