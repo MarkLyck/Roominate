@@ -40,6 +40,12 @@
   .button {
     border: none;
     background: none;
+    i {
+      color: $primary-color;
+    }
+    .close {
+      color: #555;
+    }
   }
 }
 
