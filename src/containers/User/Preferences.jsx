@@ -1,16 +1,16 @@
 import React from 'react';
 import './styles/get-started.css';
+import $ from 'jquery';
 
 class Preferences extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      has_pets: null,
-      has_cats: false,
-      has_dogs: false,
-      is_smoker: null,
-      lgbtq_friendly: null,
-      has_children: null,
+      profile: 'test@test.com',
+      has_pets: true,
+      is_smoker: true,
+      lgbtq_friendly: true,
+      has_children: true,
       sex: "",
       relationship_status: "",
       temperament: "",
@@ -45,6 +45,17 @@ class Preferences extends React.Component {
     newState['minimum_age'] = this.refs.min.value;
     newState['maximum_age'] = this.refs.max.value;
     console.log('state after submit', newState);
+    $.ajax({
+      type: "POST",
+      data: newState,
+      url: 'http://a8509e9d.ngrok.io/roominate/preferences/',
+      error: function(msg) {
+        console.log('you failed', msg);
+      },
+      success: function(data) {
+        console.log(data);
+      }
+    });
   }
 
   render() {
