@@ -1,4 +1,6 @@
 
+// We were goin to use redux, but just went with a object datastore, for the prototype due to lack of time.
+
 let store = {
   session: {
     data: {
