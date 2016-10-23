@@ -39,7 +39,7 @@ class NavBar extends Component {
           <nav className="navbar">
             <h3>Roominate</h3>
             <button className="button" onClick={this.toggleDrawer}>
-              <i className="material-icons">menu</i>
+              <i className="material-icons">{this.state.drawerOpen ? 'clear' : 'menu' }</i>
             </button>
           </nav>
           <TransitionGroup
